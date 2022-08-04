@@ -29,8 +29,8 @@ Desktop view             |  Mobile view
 
 ### Links
 
-- Solution URL: [Frontend mentor solution link](https://your-solution-url.com)
-- Live Site URL: [Live site link](https://your-live-site-url.com)
+- Solution URL: [Frontend mentor solution link](https://www.frontendmentor.io/solutions/huddle-landing-page-made-with-html-aand-css-JnKaLXsLbt)
+- Live Site URL: [Live site link](https://huddle-landing-page-new.netlify.app/)
 
 ## My process
 
