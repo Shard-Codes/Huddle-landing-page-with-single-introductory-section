@@ -1,0 +1,269 @@
+/*==================== Google fonts link - Poppins  ====================*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/*==================== Google fonts link - Open Sans  ====================*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+/*==================== Html reset ====================*/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.1;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/*==================== Css variables ====================*/
+:root {
+  /*========== Colors ==========*/
+  /* Primary */
+  --clr-primary-900: hsl(257, 40%, 49%);
+  --clr-primary-800: hsl(300, 69%, 71%);
+
+  /*========== Typography ==========*/
+  /* Fonts */
+  --ff-primary: 'Open Sans', sans-serif;
+  --ff-secondary: 'Poppins', sans-serif;
+
+  /* Font weights */
+  --fw-semi-bold: 700;
+  --fw-regular: 400;
+
+  /* Font sizes */
+  --fs-500: 2rem;
+  --fs-400: 1.5rem;
+  --fs-300: 1.25rem;
+  --fs-200: 1rem;
+}
+
+/*==================== Base styles ====================*/
+body {
+  background-color: var(--clr-primary-900);
+  background-image: url(../images/bg-desktop.svg);
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  font-family: var(--ff-primary);
+  position: relative;
+}
+
+html {
+  font-size: 100%;
+}
+
+.main {
+  overflow: hidden;
+}
+
+/*==================== Reusable styles ====================*/
+.container {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+/* Visually hidden class */
+.visually__hidden {
+  position: absolute;
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/*==================== Navigation ====================*/
+.navigation {
+  padding: 1.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.nav__logo {
+  width: 220px;
+}
+
+/*==================== Hero ====================*/
+.hero__container {
+  grid-template-columns: 1fr .8fr;
+  padding: 2rem 0 0;
+  align-items: center;
+  gap: 3rem;
+}
+
+.hero__img,
+.hero__data {
+  width: 100%;
+}
+
+.hero__title {
+  font-size: var(--fs-500);
+  font-family: var(--ff-secondary);
+  font-weight: var(--fw-semi-bold);
+  color: hsl(0, 0%, 100%);
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.hero__description {
+  line-height: 1.6;
+  font-size: var(--fs-200);
+  color: hsl(0, 0%, 100%);
+  margin-bottom: 2rem;
+}
+
+.hero__btn {
+  padding: 1rem 3rem;
+  border-radius: 100vmax;
+  border: none;
+  outline: none;
+  color: var(--clr-primary-900);
+  cursor: pointer;
+  box-shadow: 12px 18px 35px rgba(0, 0, 0, .3);
+  font-size: var(--fs-300);
+  transition: all 0.3s;
+  font-weight: var(--fw-regular);
+}
+
+.hero__btn:hover {
+  background-color: var(--clr-primary-800);
+  color: hsl(0, 0%, 100%);
+}
+
+.footer {
+  position: absolute;
+  bottom: 1rem;
+  right: 5rem;
+}
+
+.social__links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.social__icon {
+  padding: .5rem;
+  border-radius: 50%;
+  border: 1px solid hsl(0, 0%, 100%);
+  font-size: 1.25rem;
+  color: hsl(0, 0%, 100%);
+  transition: all 0.3s;
+}
+
+.social__icon:hover {
+  color: var(--clr-primary-800);
+  border-color: var(--clr-primary-800);
+}
+
+/*================= Media queries ====================*/
+/* 800px wide */
+@media (max-width: 50em) {
+  .hero__container {
+    grid-template-columns: 1fr;
+  }
+
+  .hero__data {
+    text-align: center;
+  }
+
+  .footer {
+    position: initial;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+  }
+}
+
+/* 384px wide */
+@media (max-width: 24em) {
+  .hero__title {
+    font-size: var(--fs-400);
+  }
+
+  .hero__description {
+    font-size: var(--fs-200);
+  }
+}
